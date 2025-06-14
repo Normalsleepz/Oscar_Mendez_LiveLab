@@ -6,32 +6,163 @@
 }
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  color: #1A1A1A;
-  background-color: #fff;
+  font-family: 'Tajawal', sans-serif;
+}
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+.logo {
+  height: 20px;
+}
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.navbar-center a {
+  color: #1A1A1A;
+  text-decoration: none;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px; /* spacing between text and arrow */
+}
+
+.navbar-right a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #1A1A1A;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.divider {
+  width: 2px;
+  height: 40px;
+  background-color: #1A1A1A;
+  margin: 0 20px;
+}
+
+.sign-in {
+  margin-right: 20px;
+}
+
+.give-button {
+  background-color: #fdd835;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 400;;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.drop-icon {
+  margin-left: 8px;
+}
+/* Dropdowns in Navbar */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.arrow {
+  font-size: 0.7em;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #1A1A1A;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 400;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 /* Hero Section */
+
 .hero {
-  background-image: url('https://cdn2.dropmarkusercontent.com/52043/7d5b1cd3f04618d648509e97ec3296efea3306283c92d00b2ae71b307d190447/preview/7836_Ethiopia_2019_CG-.jpg?Expires=1749925061&Signature=ZKRghg13LVS5lkkzrXplF9TF5EoUia7w89vEupGl1IOscstNh0J6j3~Z8vfA074R0BQZ3odOj1Y~n565r-lg0qMqsCHqoFFuAydIPD-Wlp1JjyE~jV7ASpauIX21F9SA-hL0GXOQaNkOTdodWsJHBYHEoUNo9q5vGM3wBd2Zqh8fwyQK~3JqBRmXGLn~QGmw84vsIJ7GltHW83lZAg4zwml7Az3kE5j~10P5MGNdsAnnx~hnIdN2SdNzZQGrUOtM1UlZOCZlZt7~W1JiSGHj45wp1FnOo-D2Zur8H5gPWG6SvbKPObio-vcSeapv14-9eri9G4AXUwgE1XcPh2DE7g__&Key-Pair-Id=APKAITQYWVEN757ZA4KQttps://via.placeholder.com/1600x900');
+  background-image: url(7836_Ethiopia_2019_CG-.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 90vh;
   position: relative;
 }
 
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 100px 40px;
+   position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0) 70%);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 600px;
+  padding: 100px 40px;
+  color: white;
+  z-index: 1;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .hero-overlay h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   font-size: 3rem;
   line-height: 1.2;
   margin-bottom: 30px;
@@ -41,8 +172,9 @@ body {
   background-color: #ffc907a4;
   color: black;
   padding: 18px 36px;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
   border-radius: 999px;
   transition: background-color 0.3s;
@@ -68,8 +200,10 @@ body {
   border-radius: 30px;
   padding: 40px;
   text-align: center;
-  font-size: 1.2rem;
+  font-family: 'Georgia', serif;
+  font-size: 1.3rem;
   line-height: 1.6;
+  font-weight: normal;
   max-width: 800px;
   width: 100%;
 }
